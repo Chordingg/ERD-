@@ -153,29 +153,85 @@ limit 1;
 ************************************************************************
 
 -- Q9. '교양 영어' 과목을 수강 신청한 학생의 이름을 출력하세요
+
 select * from course;
 select * from student;
 select* from student_course;
 
-select sc.student_id
+select student_id
 from course c
-join student_course sc 
+join student_course sc
 on c.course_code = sc.course_code
 where course_name = '교양 영어';
 
 select student_name
-from student s 
+from student
 where student_id in (1,2);
 
 select student_name
-from student s 
+from student
 where student_id in (
-	select sc.student_id
-	from course c
-	join student_course sc 
-	on c.course_code = sc.course_code
-	where course_name = '교양 영어'
+   select student_id
+   from course c
+   join student_course sc
+   on c.course_code = sc.course_code
+   where course_name = '교양 영어'
 );
 
+select course_code
+from course
+where course_name = '교양 영어';
+
+
+select student_id
+from student_course
+where course_code = '1';
+
+
+select student_name
+from student
+where student_id in (1,2);
+
+select student_id
+from student_course
+where course_code = (
+   select course_code
+   from course
+   where course_name = '교양 영어'
+);
+
+select student_name
+from student
+where student_id in (
+   select student_id
+   from student_course
+   where course_code = (
+      select course_code
+      from course
+      where course_name = '교양 영어'
+   )
+);
 
 ************************************************************************
+
+-- Q10. '가교수' 교수의 과목을 수강 신청한 학생 수를 출력하세요
+
+select* from student_course;
+select* from professor;
+select* from course;
+
+select course_code
+from course c 
+join professor p 
+on c.professor_code = p.professor_code
+where p.professor_name = '가교수';
+
+select count(student_id) as 학생수
+from student_course
+where course_code = (
+	select course_code
+	from course c 
+	join professor p 
+	on c.professor_code = p.professor_code
+	where p.professor_name = '가교수'
+);
