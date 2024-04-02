@@ -5,6 +5,8 @@
 
 ![주석 2024-04-02 095800](https://github.com/Chordingg/ERD-/assets/157094467/18b28831-e655-4ded-a48a-dfb2e1a0d2aa)
 
+![주석 2024-04-02 095914](https://github.com/Chordingg/ERD-/assets/157094467/c4372d4c-787a-4966-aebc-8b95ae0b2fbc)
+
 ![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
 
 
