@@ -226,6 +226,11 @@ join professor p
 on c.professor_code = p.professor_code
 where p.professor_name = '가교수';
 
+select count(course_code) 
+from student_course
+where course_code = 1;
+
+
 select count(student_id) as 학생수
 from student_course
 where course_code = (
