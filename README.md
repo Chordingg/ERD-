@@ -1,4 +1,6 @@
 
+# ❗ MySQL을 사용하여 데이터 모델링의 개념(Data Modeling) 을 알고자 한다 ❗
+
 <img width="406" alt="다운로드" src="https://github.com/Chordingg/ERD-/assets/157094467/d5ff8756-2224-4442-96a0-37025691a336">
 
 </br>
