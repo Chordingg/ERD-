@@ -22,3 +22,29 @@ on p.department_code = d.department_code
 group by d.department_name;
 
 ************************************************************************
+
+-- Q3. 수학통계학의 학생 정보를 출력하세요
+
+select * from department;
+select * from student;
+
+select s.student_id,student_name, s.student_height, d.department_code, d.department_name
+from student s
+inner join department d
+on s.department_code = d.department_code
+where d.department_name = '수학통계학';
+
+************************************************************************
+
+-- Q4. 학생 중 성이 '바' 인 학생이 속한 학과 이름과 학생 이름을 출력하세요
+
+select * from department;
+select * from student;
+
+select s.student_name 학생이름,  d.department_name as 과명
+from student s
+join department d
+on s.department_code = d.department_code
+where s.student_name like '바%'; 
+
+************************************************************************
