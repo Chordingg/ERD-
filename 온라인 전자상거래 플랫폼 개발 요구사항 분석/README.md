@@ -29,6 +29,8 @@
 
 ***
 
+ <br/>
+ 
 🔹 테이블 정의서
 
 ![테이블 정의서(excel)](https://github.com/Chordingg/ERD-/assets/157094467/aaf4241a-88db-4c10-8710-2c12e2f4964e)
