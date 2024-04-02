@@ -39,14 +39,18 @@
 </br>
 
 🔹 개념적 모델링
+
 ![주석 2024-04-02 114042](https://github.com/Chordingg/ERD-/assets/157094467/0c84812e-62d5-42d1-883d-04b64a401aa8)
 
 </br>
 
 🔹 논리적 모델링
+
 ![주석 2024-04-02 114118](https://github.com/Chordingg/ERD-/assets/157094467/61e36240-86d6-44ab-ba4f-c16f67d40fa0)
 
 </br>
+
+🔹 EER Diagram
 
 ![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
 
@@ -99,11 +103,128 @@
 </br>
 
 🔹 개념적 모델링
+
 ![주석 2024-04-02 104426](https://github.com/Chordingg/ERD-/assets/157094467/1dc4e897-8ef0-4ed6-96c5-48d48ca55452)
 
 </br>
 
 🔹 논리적 모델링
+
 ![주석 2024-04-02 115105](https://github.com/Chordingg/ERD-/assets/157094467/350b0700-469b-4035-a649-494e23c4d37b)
 
 </br>
+
+🔹 EER Diagram
+
+![주석 2024-04-02 115828](https://github.com/Chordingg/ERD-/assets/157094467/8b3ed933-b616-44d0-bf52-9094967ba4d6)
+
+</br>
+</br>
+
+🔸 MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8mb3 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`department`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`department` (
+  `department_code` INT NOT NULL,
+  `department_name` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`department_code`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`student`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`student` (
+  `student_id` INT NOT NULL,
+  `student_name` VARCHAR(50) NOT NULL,
+  `student_height` DECIMAL(5,2) NULL,
+  `department_department_code` INT NOT NULL,
+  PRIMARY KEY (`student_id`),
+  INDEX `fk_student_department_idx` (`department_department_code` ASC) VISIBLE,
+  CONSTRAINT `fk_student_department`
+    FOREIGN KEY (`department_department_code`)
+    REFERENCES `mydb`.`department` (`department_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`professor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`professor` (
+  `professor_code` INT NOT NULL,
+  `professor_name` VARCHAR(50) NOT NULL,
+  `department_department_code` INT NOT NULL,
+  PRIMARY KEY (`professor_code`),
+  INDEX `fk_professor_department1_idx` (`department_department_code` ASC) VISIBLE,
+  CONSTRAINT `fk_professor_department1`
+    FOREIGN KEY (`department_department_code`)
+    REFERENCES `mydb`.`department` (`department_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`course`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`course` (
+  `course_code` INT NOT NULL,
+  `course_name` VARCHAR(50) NOT NULL,
+  `start_date` DATE NULL,
+  `end_date` DATE NULL,
+  `professor_professor_code` INT NOT NULL,
+  PRIMARY KEY (`course_code`),
+  INDEX `fk_course_professor1_idx` (`professor_professor_code` ASC) VISIBLE,
+  CONSTRAINT `fk_course_professor1`
+    FOREIGN KEY (`professor_professor_code`)
+    REFERENCES `mydb`.`professor` (`professor_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`student_course`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`student_course` (
+  `id` INT NOT NULL,
+  `student_student_id` INT NOT NULL,
+  `course_course_code` INT NOT NULL,
+  INDEX `fk_student_course_student1_idx` (`student_student_id` ASC) VISIBLE,
+  INDEX `fk_student_course_course1_idx` (`course_course_code` ASC) VISIBLE,
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  PRIMARY KEY (`course_course_code`, `student_student_id`),
+  CONSTRAINT `fk_student_course_student1`
+    FOREIGN KEY (`student_student_id`)
+    REFERENCES `mydb`.`student` (`student_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_student_course_course1`
+    FOREIGN KEY (`course_course_code`)
+    REFERENCES `mydb`.`course` (`course_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
