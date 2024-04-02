@@ -13,12 +13,12 @@ on p.department_code = d.department_code ;
 -- Q2. 학과별 교수의 수를 출력하세요
 
 select* from professor;
-select* from course;
+select* from department;
 
-select c.course_name , count(c.course_code) as 교수의수
-from course c
-join professor p 
-on c.professor_code = p.professor_code
-group by c.course_name;
+select d.department_name as 학과명, count(p.professor_code) as 교수의수
+from professor p
+join department d
+on p.department_code = d.department_code
+group by d.department_name;
 
 ************************************************************************
