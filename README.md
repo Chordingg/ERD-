@@ -41,8 +41,12 @@
 🔹 개념적 모델링
 ![주석 2024-04-02 114042](https://github.com/Chordingg/ERD-/assets/157094467/0c84812e-62d5-42d1-883d-04b64a401aa8)
 
+</br>
+
 🔹 논리적 모델링
 ![주석 2024-04-02 114118](https://github.com/Chordingg/ERD-/assets/157094467/61e36240-86d6-44ab-ba4f-c16f67d40fa0)
+
+</br>
 
 ![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
 
@@ -97,5 +101,9 @@
 🔹 개념적 모델링
 ![주석 2024-04-02 104426](https://github.com/Chordingg/ERD-/assets/157094467/1dc4e897-8ef0-4ed6-96c5-48d48ca55452)
 
+</br>
+
 🔹 논리적 모델링
 ![주석 2024-04-02 115105](https://github.com/Chordingg/ERD-/assets/157094467/350b0700-469b-4035-a649-494e23c4d37b)
+
+</br>
