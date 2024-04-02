@@ -62,4 +62,38 @@ where student_height >= 175 and student_height <= 180;
 
 ************************************************************************
 
+-- Q6. 학과별 키의 최고값과, 평균값을 출력하세요
+select * from department;
+select * from student;
 
+select department_name, max(s.student_height) as 최고값, avg(s.student_height) as 평균값
+from department d
+join student s
+on d.department_code = s.department_code
+group by department_name;
+
+************************************************************************
+
+-- Q7. '다학생'과 같은 학과에 속한 학생의 이름을 출력하세요
+select * from department;
+select * from student;
+
+select student_name
+from student
+where department_code = '1';
+
+select department_code
+from student 
+where student_name = '다학생';
+
+# 위 아래 문장을 합친것
+
+select student_name
+from student
+where department_code = (
+	select department_code
+	from student 
+	where student_name = '다학생'
+    );
+
+************************************************************************
