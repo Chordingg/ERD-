@@ -33,25 +33,29 @@
  
 🔹 테이블 정의서
 
-![테이블 정의서(excel)](https://github.com/Chordingg/ERD-/assets/157094467/aaf4241a-88db-4c10-8710-2c12e2f4964e)
+![테이블 정의서(excel)](https://github.com/Chordingg/ERD-/assets/157094467/be9cfe50-6f25-44ab-b38c-5ae75b47a402)
+
 
 </br>
 
 🔹 개념적 모델링
 
-![주석 2024-04-02 114042](https://github.com/Chordingg/ERD-/assets/157094467/0c84812e-62d5-42d1-883d-04b64a401aa8)
+![주석 2024-04-02 114042](https://github.com/Chordingg/ERD-/assets/157094467/0590e678-ff84-4e07-b509-39f71bc3db83)
+
 
 </br>
 
 🔹 논리적 모델링
 
-![주석 2024-04-02 114118](https://github.com/Chordingg/ERD-/assets/157094467/61e36240-86d6-44ab-ba4f-c16f67d40fa0)
+![주석 2024-04-02 114118](https://github.com/Chordingg/ERD-/assets/157094467/0c84f38c-0069-4fd7-8425-e620a0c9fe13)
+
 
 </br>
 
 🔹 EER Diagram
 
-![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
+![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/c421693a-8a5c-45c0-92c1-e73eb04d3652)
+
 
 </br>
 
