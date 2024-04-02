@@ -97,3 +97,16 @@ where department_code = (
     );
 
 ************************************************************************
+
+-- Q8. 가장 많은 학생이 있는 학과 이름을 출력하세요
+select * from department;
+select * from student;
+
+select count(department_code) as count
+from student
+group by department_code
+order by count desc
+limit 1;
+
+************************************************************************
+
