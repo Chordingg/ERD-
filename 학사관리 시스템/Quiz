@@ -152,3 +152,30 @@ limit 1;
 
 ************************************************************************
 
+-- Q9. '교양 영어' 과목을 수강 신청한 학생의 이름을 출력하세요
+select * from course;
+select * from student;
+select* from student_course;
+
+select sc.student_id
+from course c
+join student_course sc 
+on c.course_code = sc.course_code
+where course_name = '교양 영어';
+
+select student_name
+from student s 
+where student_id in (1,2);
+
+select student_name
+from student s 
+where student_id in (
+	select sc.student_id
+	from course c
+	join student_course sc 
+	on c.course_code = sc.course_code
+	where course_name = '교양 영어'
+);
+
+
+************************************************************************
