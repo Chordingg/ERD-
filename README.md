@@ -1,5 +1,5 @@
 # ERD연습
-MySQL
+[온라인 전자상거래 플랫폼 개발 요구사항 분석]
 
 <img width="406" alt="다운로드" src="https://github.com/Chordingg/ERD-/assets/157094467/432c68b4-5941-4a1c-9757-356e4287e682">
 
@@ -9,3 +9,6 @@ MySQL
 ![주석 2024-04-01 125517](https://github.com/Chordingg/ERD-/assets/157094467/c4a8da1b-216a-4430-b506-8f6364df255f)
 
 ![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
+
+
+[학사관리 시스템]
