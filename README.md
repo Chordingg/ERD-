@@ -11,7 +11,7 @@
 ![MySQL EER Diagram](https://github.com/Chordingg/ERD-/assets/157094467/598b4c49-0fb3-4e18-b2b8-152e161fcf0f)
 
 
-<hr>
+***
 
 [학사관리 시스템]
 
