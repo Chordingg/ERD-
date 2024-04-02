@@ -41,6 +41,12 @@
 
 </br>
 
+🔹 테이블 정의서
+
+![주석 2024-04-02 114528](https://github.com/Chordingg/ERD-/assets/157094467/c1e081c2-7468-4359-a6d3-c6e4c073bbfb)
+
+</br>
+
 🔹 개념적 모델링
 
 ![주석 2024-04-02 104426](https://github.com/Chordingg/ERD-/assets/157094467/1dc4e897-8ef0-4ed6-96c5-48d48ca55452)
