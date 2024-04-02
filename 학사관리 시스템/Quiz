@@ -48,3 +48,18 @@ on s.department_code = d.department_code
 where s.student_name like '바%'; 
 
 ************************************************************************
+
+-- Q5. 학생의 키가 175 ~ 180 사이에 속하는 학생 수를 출력하세요
+select * from student;
+
+select concat(count(student_id), '명')  count
+from student
+where student_height between 175 and 180;
+
+select concat(count(student_id), '명')  count
+from student
+where student_height >= 175 and student_height <= 180;
+
+************************************************************************
+
+
