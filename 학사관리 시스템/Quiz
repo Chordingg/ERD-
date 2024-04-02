@@ -1,1 +1,24 @@
+-- Q1. 교수의 학과 정보를 출력하세요(교수이름, 학과명)
 
+select* from professor;
+select* from department;
+
+select p.professor_name as 교수이름, d.department_name as 학과명
+from professor p
+join department d
+on p.department_code = d.department_code ;
+
+************************************************************************
+
+-- Q2. 학과별 교수의 수를 출력하세요
+
+select* from professor;
+select* from course;
+
+select c.course_name , count(c.course_code) as 교수의수
+from course c
+join professor p 
+on c.professor_code = p.professor_code
+group by c.course_name;
+
+************************************************************************
