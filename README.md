@@ -34,11 +34,10 @@
 과목  (과목코드, 과목명, 시작일, 종료일)
 
 
-|    |<center>right</center>|<center>left</center>|center
-|----|---------------------:|:--------------------|:---------------------:
-|row1|data                  |data                 |data
-|row2|data2-1               |data2-2              |data2-3
-|row3|data 3-1              |data 3-2             |data 3-3
+|    |<center>right</center>|<center>left</center>|
+|----|---------------------:|:--------------------|
+|소속|학과  / 학생                 |1:N              
+||학과 / 교수              |1:N-2             
 
 
 관계  참여객체  관계유형  속성
