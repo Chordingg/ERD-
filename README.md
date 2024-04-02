@@ -1,5 +1,9 @@
 # ERD연습
 
+<img width="406" alt="다운로드" src="https://github.com/Chordingg/ERD-/assets/157094467/432c68b4-5941-4a1c-9757-356e4287e682"> 
+</hr>
+출처 : https://mangkyu.tistory.com/27
+
 ## ⭐ [온라인 전자상거래 플랫폼 개발 요구사항 분석]
 
 온라인 전자상거래 플랫폼 개발 요구사항 분석 고객은 <br/>
@@ -26,9 +30,6 @@
 |----|----|----|----|----|----|----|----|----|
 |구매|구매코드|구매수량|구매일자|||||M : N 
 |관리|고객은 지역별로 관리|||||||1 : N 
-
-
-<img width="406" alt="다운로드" src="https://github.com/Chordingg/ERD-/assets/157094467/432c68b4-5941-4a1c-9757-356e4287e682">
 
 ![주석 2024-04-02 095800](https://github.com/Chordingg/ERD-/assets/157094467/18b28831-e655-4ded-a48a-dfb2e1a0d2aa)
 
