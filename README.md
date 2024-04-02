@@ -1,8 +1,11 @@
 # ERD연습
 
 <img width="406" alt="다운로드" src="https://github.com/Chordingg/ERD-/assets/157094467/432c68b4-5941-4a1c-9757-356e4287e682"> 
-</hr>
+</br>
 출처 : https://mangkyu.tistory.com/27
+
+</br>
+</br>
 
 ## ⭐ [온라인 전자상거래 플랫폼 개발 요구사항 분석]
 
@@ -39,6 +42,8 @@
 
 
 ***
+</br>
+</br>
 
 ## ⭐ [학사관리 시스템]
 
