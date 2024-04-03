@@ -240,3 +240,58 @@ where course_code = (
 	on c.professor_code = p.professor_code
 	where p.professor_name = '가교수'
 );
+
+************************************************************************
+
+-- Q11. '사학생'학생과 같은 과목을 수강신청한 학생이름을 출력하세요.
+
+select* from student_course;
+select* from student;
+
+-- cource_code = 5가 나옴
+select sc.course_code
+from student s 
+join student_course sc
+on s.student_id = sc.student_id
+where s.student_name = '사학생';
+
+select s.student_name
+from student s 
+join student_course sc
+on s.student_id = sc.student_id
+where sc.course_code = (
+	select sc.course_code
+	from student s 
+	join student_course sc
+	on s.student_id = sc.student_id
+	where s.student_name = '사학생'
+);
+
+***************************or***************************
+
+select student_name
+from student
+where student_id in(
+   select student_id
+    from student_course
+    where course_code = (
+      select sc.course_code
+        from student s
+        join student_course sc
+        on s.student_id = sc.student_id
+        where s.student_name = '사학생'
+    )    
+);
+
+************************************************************************
+
+-- Q12. '사학생'이 수강신청한 과목의 과목이름과 시작일자를 출력하세요.
+select course_name, start_date
+from course
+where course_code = (
+   select sc.course_code
+        from student s
+        join student_course sc
+        on s.student_id = sc.student_id
+        where s.student_name = '사학생' 
+);
